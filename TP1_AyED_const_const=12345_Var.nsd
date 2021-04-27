@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.31-02" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="PC" created="2021-04-10" changedby="PC" changed="2021-04-10" origin="Structorizer 3.31-02" text="&#34;TP1 AyED&#34;,&#34;const&#34;,&#34;const=12345&#34;,&#34;Var: x, y, c, cont, cont R, cont BA, cont C, teléfono, max, COD/EMP:integer&#34;,&#34;nmax, COD/CIUDAD, Nombre, Direccion, Mail, Nombre Ciudad:string&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;mostrar(&#34;&#34;1.empresas&#34;,&#34;2.clientes&#34;,&#34;0.salir&#34;&#34;)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;leer(x)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<alternative text="&#34;x=1&#34;" comment="" color="ffffff" disabled="0">
+			<qTrue>
+				<repeat text="&#34;until (cont = 3 or y  = const)&#34;" comment="" color="ffffff" disabled="0">
+					<qRepeat>
+						<instruction text="&#34;mostrar(&#34;&#34;ingresar clave&#34;&#34;)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;leer(y)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;cont &#60;-- cont + 1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qRepeat>
+				</repeat>
+				<alternative text="&#34;si y = const&#34;" comment="" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;mostrar(&#34;&#34;oprima 1 para alta de empresas &#34;,&#34;0.para ir al menu principal&#34;&#34;)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;leer(c)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<case text="&#34;c&#34;,&#34;1.&#34;,&#34;2.&#34;,&#34;3.&#34;,&#34;0.&#34;,&#34;%&#34;" comment="" color="ffffff" disabled="0">
+							<qCase>
+								<while text="&#34;while (COD/EMP=0)&#34;" comment="" color="ffffff" disabled="0">
+									<qWhile>
+										<instruction text="&#34;leer(COD/EMP)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;Mostrar(&#34;&#34;ingrese nombre:&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;&#34;,&#34;leer(nombre)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;Mostrar(&#34;&#34;ingrese Dirección:&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;leer(Direccion)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;Mostrar(&#34;&#34;ingrese Mail:&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;leer(Mail)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;Mostrar(&#34;&#34;ingrese Teléfono:&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;leer(Teléfono)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;Mostrar(&#34;&#34;ingrese COD/CIUDAD&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;leer(COD/CIUDAD)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;Mostrar(&#34;&#34;ingrese Nombre Ciudad:&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;leer(Nombre Ciudad)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+										<case text="&#34;COD/CIUDAD&#34;,&#34;ROS&#34;,&#34;BA&#34;,&#34;C&#34;,&#34;%&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+											<qCase>
+												<instruction text="&#34;cont R &#60;-- cont R +1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+											</qCase>
+											<qCase>
+												<instruction text="&#34;cont BA &#60;-- cont BA + 1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+											</qCase>
+											<qCase>
+												<instruction text="&#34;cont C &#60;-- cont C + 1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+											</qCase>
+											<qCase color="ffffff">
+											</qCase>
+										</case>
+										<alternative text="&#34;cont R &#62; cont C&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+											<qTrue>
+												<alternative text="&#34;cont R &#62; cont BA&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+													<qTrue>
+														<instruction text="&#34;nmax &#60;-- Rosario&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+														<instruction text="&#34;max &#60;-- cont R&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+													</qTrue>
+													<qFalse>
+														<instruction text="&#34;nmax &#60;-- Buenos Aires&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+														<instruction text="&#34;max &#60;-- cont BA&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+													</qFalse>
+												</alternative>
+											</qTrue>
+											<qFalse>
+												<alternative text="&#34;cont C &#62; cont BA&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+													<qTrue>
+														<instruction text="&#34;nmax &#60;-- Córdoba&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+														<instruction text="&#34;max &#60;-- cont C&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+													</qTrue>
+													<qFalse>
+														<instruction text="&#34;nmax &#60;-- Buenos Aires&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+														<instruction text="&#34;max &#60;-- cont BA&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+													</qFalse>
+												</alternative>
+											</qFalse>
+										</alternative>
+										<instruction text="&#34;mostrar (&#34;&#34;ingrese COD/EMP o 0 para volver al menu principal&#34;&#34;)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+										<instruction text="&#34;leer(COD/EMP)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qWhile>
+								</while>
+							</qCase>
+							<qCase color="ffffff">
+							</qCase>
+							<qCase color="ffffff">
+							</qCase>
+							<qCase color="ffffff">
+							</qCase>
+							<qCase color="ffffff">
+							</qCase>
+						</case>
+					</qTrue>
+					<qFalse>
+						<instruction text="&#34;Mostrar(&#34;&#34;contraseña incorrecta&#34;&#34;)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qFalse>
+				</alternative>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<instruction text="&#34;mostrar(&#34;&#34;la ciudad que tiene registrada mas empresas desarrolladoras es:&#34;&#34;,nmax,&#34;&#34;y la cantidad es&#34;&#34;,max)&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;Mostrar(&#34;&#34;La ciudad de Rosario: &#34;&#34;, cont R, &#34;&#34;La ciudad de cordoba: &#34;&#34;,cont C, &#34;&#34;La ciudad de BA: &#34;&#34;,cont BA);&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<alternative text="&#34;x=2&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;Mostrar(&#34;&#34;Programa en proceso&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<alternative text="&#34;x = 0&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;mostrar(&#34;&#34;gracias por su visita&#34;&#34;)&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+	</children>
+</root>
