@@ -10,9 +10,22 @@ while x!=0:
 
 	
 	if x==1:
-		for contContra in range(3):
-			y = int(input("ingrese clave: "))
-			if y==const:
+		y = int(input("ingrese clave: "))
+		while y !=const :
+			
+			if contContra==0:
+				y = int(input("contraseña incorrecta intente nuevamente: "))
+				contContra=contContra+1
+
+			elif contContra==1:
+				y = int(input("contraseña incorrecta intente nuevamente, le queda un intento: "))	
+				contContra=contContra+1
+
+			elif contContra==2:
+				print("ha superado el maximo de intentos posibles")
+				raise SystemExit
+		contContra=0	
+		if y==const:
 				print()
 				c = int(input("oprima 1 para alta de Empresas 0 para salir: "))
 				if c == 1:
@@ -55,20 +68,11 @@ while x!=0:
 			
 				elif c==0:
 					print("gracias, vuelva prontos")
-					raise SystemExit
+					raise SystemExit	
 
-			else:
-				
-				contContra==contContra+1
-				if contContra==0:
-					print("contraseña incorrecta intente nuevamente")
 			
-				if contContra==1:
-					print("le queda un intento")
-					
-				if contContra==2:
-					print("ha superado el maximo de intentos posibles")
-					raise SystemExit
+				
+				
 			
 
 	elif x == 2:
